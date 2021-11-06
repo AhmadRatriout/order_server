@@ -9,10 +9,10 @@ public class orderServer {
     public static void main(String[] args) {
         BasicConfigurator.configure();
 
-        get("/purchase/:value", (request, response) -> {
+        post("/purchase/:value", (request, response) -> {
 
             String value = request.params(":value");
-            
+            System.out.println("HHHHHHHHHHHHH "+value+" hhhhhhhhhh");
             
             
             URL url = new URL("http://192.168.1.250:4567/purchase/"+value);
